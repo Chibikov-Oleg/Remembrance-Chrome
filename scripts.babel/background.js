@@ -14,9 +14,9 @@ var sendTextToRemembrance = function (text) {
 		data: JSON.stringify(text),
 		error: function (e) {
 			if (!e.responseText)
-				console.log('Remembrance is not launched.');
+				alert('Remembrance is not launched.');
 			else
-				console.log(e.responseText);
+				alert(e.responseText);
 		},
 	});
 }

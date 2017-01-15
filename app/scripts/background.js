@@ -13,7 +13,7 @@ var sendTextToRemembrance = function sendTextToRemembrance(text) {
 		processData: false,
 		data: JSON.stringify(text),
 		error: function error(e) {
-			if (!e.responseText) console.log('Remembrance is not launched.');else console.log(e.responseText);
+			if (!e.responseText) alert('Remembrance is not launched.');else alert(e.responseText);
 		}
 	});
 };

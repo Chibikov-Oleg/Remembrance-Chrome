@@ -11,7 +11,7 @@
     "scripts": [
       "scripts/chromereload.js",
       "scripts/background.js",
-      "bower_components/jquery/dist/jquery.min.js"
+      "lib/jquery/dist/jquery.min.js"
     ]
   },
   "permissions": [ "http://localhost:2033/api/words/*", "webRequest", "webRequestBlocking", "contextMenus", "tabs" ]

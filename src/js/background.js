@@ -44,7 +44,7 @@ const sendTextToRemembrance = text => {
 };
 
 const hideWindowAsync = () => {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     chrome.windows.getCurrent(function(win) {
       chrome.windows.update(win.id, { state: "minimized" });
       resolve();
@@ -53,7 +53,7 @@ const hideWindowAsync = () => {
 };
 
 function removeTab(tabId) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function(resolve) {
     chrome.tabs.remove(tabId, resolve);
   });
 }

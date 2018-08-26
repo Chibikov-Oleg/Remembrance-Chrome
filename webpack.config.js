@@ -25,5 +25,14 @@ module.exports = {
     filename: "scripts/[name].js",
     sourceMapFilename: "map/[file].map"
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      }
+    ]
+  },
   devtool: "source-map"
 };

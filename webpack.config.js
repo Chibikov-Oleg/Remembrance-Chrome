@@ -23,6 +23,7 @@ module.exports = {
   output: {
     path: outputPath,
     filename: "scripts/[name].js",
-    sourceMapFilename: "debugging/[file].map"
-  }
+    sourceMapFilename: "map/[file].map"
+  },
+  devtool: "source-map"
 };

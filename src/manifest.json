@@ -10,8 +10,7 @@
   "background": {
     "scripts": [
       "scripts/chromereload.js",
-      "scripts/background.js",
-      "lib/jquery/dist/jquery.min.js"
+      "scripts/background.js"
     ]
   },
   "permissions": [ "http://localhost:2033/api/words/*", "webRequest", "webRequestBlocking", "contextMenus", "tabs" ]

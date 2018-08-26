@@ -75,3 +75,5 @@ Output/
 bower_components/
 node_modules/
 lib/
+/.idea
+/build

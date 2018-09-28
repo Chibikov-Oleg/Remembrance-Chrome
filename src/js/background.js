@@ -65,16 +65,15 @@ chrome.webRequest.onBeforeRequest.addListener(
       console.log("Text to send to Remembrance: " + parameter);
       sendTextToRemembrance(parameter);
     }
-    await removeTab(details.tabId);
+    if (details.tabId >= 0) {
+      await removeTab(details.tabId);
+    }
     await hideWindowAsync();
     return {
       cancel: true
     };
   },
-  {
-    urls: [url + "*"],
-    types: ["main_frame"]
-  },
+  { urls: [url + "*"] },
   ["blocking"]
 );
 
@@ -84,7 +83,9 @@ chrome.contextMenus.create({
   title: "Send to Remembrance",
   contexts: ["selection"],
   onclick: function(e) {
-    if (!e.selectionText) return;
+    if (!e.selectionText) {
+      return;
+    }
     sendTextToRemembrance(e.selectionText);
   }
 });

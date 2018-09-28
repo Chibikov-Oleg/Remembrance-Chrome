@@ -17,8 +17,7 @@ module.exports = {
     new webpack.ProgressPlugin()
   ],
   entry: {
-    background: "./src/js/background.js",
-    chromereload: "./src/js/chromereload.js"
+    background: "./src/js/background.js"
   },
   output: {
     path: outputPath,
@@ -34,5 +33,6 @@ module.exports = {
       }
     ]
   },
-  devtool: "source-map"
+  devtool: "source-map",
+  watch: true
 };

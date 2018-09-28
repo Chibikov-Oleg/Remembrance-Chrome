@@ -9,9 +9,8 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/chromereload.js",
       "scripts/background.js"
     ]
   },
-  "permissions": [ "http://localhost:2033/api/words/*", "webRequest", "webRequestBlocking", "contextMenus", "tabs" ]
+  "permissions": [ "http://localhost:2053/api/words/*", "webRequest", "webRequestBlocking", "contextMenus", "tabs" ]
 }

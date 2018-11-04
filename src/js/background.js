@@ -60,6 +60,9 @@ function removeTab(tabId) {
 
 chrome.webRequest.onBeforeRequest.addListener(
   async function(details) {
+    if (details.type != "main_frame") {
+      return; // there is another handler for the context menu event
+    }
     const parameter = details.url.split("/").pop();
     if (parameter) {
       console.log("Text to send to Remembrance: " + parameter);

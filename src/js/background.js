@@ -38,8 +38,11 @@ function request(method, url, json) {
 
 const sendTextToRemembrance = text => {
   request("PUT", url, JSON.stringify(text)).catch(function(e) {
-    if (!e.message) alert("Remembrance is not launched.");
-    else alert(e);
+    if (!e.message) {
+      alert("Remembrance is not launched.");
+    } else {
+      alert(e);
+    }
   });
 };
 
